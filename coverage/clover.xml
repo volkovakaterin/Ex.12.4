@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1633025425198" clover="3.2.0">
-  <project timestamp="1633025425198" name="All files">
+<coverage generated="1633125099136" clover="3.2.0">
+  <project timestamp="1633125099136" name="All files">
     <metrics statements="26" coveredstatements="10" conditionals="31" coveredconditionals="6" methods="4" coveredmethods="2" elements="61" coveredelements="18" complexity="0" loc="26" ncloc="26" packages="1" files="2" classes="2"/>
     <file name="chekValid.js" path="C:\MyRepositories\Ex.12.4\src\js\chekValid.js">
       <metrics statements="9" coveredstatements="9" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1"/>
