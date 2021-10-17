@@ -38,6 +38,7 @@
     "inline-source-map": "^0.6.2",
     "jest": "^26.0.1",
     "jsdoc": "^3.6.4",
+    "puppeteer": "^10.4.0",
     "url-loader": "^4.1.0",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12",
