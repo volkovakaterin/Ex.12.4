@@ -2,11 +2,16 @@
 
 import PaymentSystemCheck from '../paymentSystemCheck';
 
-test('paymentSystem', () => {
+describe('paymentS', () => {
+   const cards = document.createElement('div');
+  cards.className = 'container';
   const paymentSystem = new PaymentSystemCheck();
-  paymentSystem.check(30569309025904);
-  const checkClass = !document.querySelector('diners_club').classList.contains('blackout');
-  expect(checkClass).toBeTruthy();
+  paymentSystem.bindToDOM(cards);
+  test('paymentSystem', () => {
+    paymentSystem.check('30569309025904');
+    console.log(paymentSystem.container);
+    console.log(paymentSystem.container.querySelector('diners_club'));
+    const checkClass = paymentSystem.container.querySelector('diners_club').classList.contains('blackout');
+    expect(checkClass).toBeTruthy();
+  });
 });
-
-

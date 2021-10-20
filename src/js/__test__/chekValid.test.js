@@ -3,7 +3,7 @@ import CheckValid from '../chekValid';
 
 test('CheckValid', () => {
   const checkValid = new CheckValid();
-  expect(checkValid.check(30569309025904)).toEqual(true);
+  expect(checkValid.check('30569309025904')).toEqual(true);
 });
 
 test('CheckValid2', () => {
