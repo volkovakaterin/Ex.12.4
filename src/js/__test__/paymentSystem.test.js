@@ -1,16 +1,15 @@
 /* eslint-disable linebreak-style */
 
 import PaymentSystemCheck from '../paymentSystemCheck';
+import Init from '../init';
 
 describe('paymentS', () => {
-   const cards = document.createElement('div');
-  cards.className = 'container';
+  const init = new Init();
   const paymentSystem = new PaymentSystemCheck();
-  paymentSystem.bindToDOM(cards);
+  init.drawPage();
   test('paymentSystem', () => {
+    console.log(document.querySelector('container'));
     paymentSystem.check('30569309025904');
-    console.log(paymentSystem.container);
-    console.log(paymentSystem.container.querySelector('diners_club'));
     const checkClass = paymentSystem.container.querySelector('diners_club').classList.contains('blackout');
     expect(checkClass).toBeTruthy();
   });
