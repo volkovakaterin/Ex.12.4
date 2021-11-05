@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for chekValid.js</title>
+    <title>Code coverage report for button.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="prettify.css" />
     <link rel="stylesheet" href="base.css" />
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="index.html">All files</a> chekValid.js</h1>
+        <h1><a href="index.html">All files</a> button.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">90% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>12/12</span>
+                <span class='fraction'>9/10</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>6/6</span>
+                <span class='fraction'>1/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/1</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">88.89% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>10/10</span>
+                <span class='fraction'>8/9</span>
             </div>
         
             
@@ -80,9 +80,7 @@
 <a name='L21'></a><a href='#L21'>21</a>
 <a name='L22'></a><a href='#L22'>22</a>
 <a name='L23'></a><a href='#L23'>23</a>
-<a name='L24'></a><a href='#L24'>24</a>
-<a name='L25'></a><a href='#L25'>25</a>
-<a name='L26'></a><a href='#L26'>26</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L24'></a><a href='#L24'>24</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -90,46 +88,42 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">137x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">137x</span>
-<span class="cline-any cline-yes">23x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">137x</span>
-<span class="cline-any cline-yes">137x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">42x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/* eslint-disable linebreak-style */
-/* eslint-disable consistent-return */
-/* eslint-disable class-methods-use-this */
-/* eslint-disable no-plusplus */
-/* eslint-disable no-cond-assign */
+/* eslint-disable no-alert */
+/* eslint-disable no-console */
 &nbsp;
-export default class CheckValid {
-  check(value) {
-    console.log('chaekValid');
-    let numberCheck = 0;
-    let booleanEven = false;
+import CheckValid from './chekValid';
+import PaymentSystemCheck from './paymentSystemCheck';
 &nbsp;
-    for (let n = value.length - 1; n &gt;= 0; n--) {
-      let number = parseInt(value.charAt(n), 10);
+export default class Button {
+  constructor(parentEl) {
+    this.parentEl = parentEl;
+    this.chekValid = new CheckValid(this.parentEl);
+    this.paymentSystemCheck = new PaymentSystemCheck(this.parentEl);
+    this.buttonValid = this.buttonValid.bind(this);
+  }
 &nbsp;
-      if (booleanEven &amp;&amp; (number *= 2) &gt; 9) {
-        number -= 9;
-      }
-&nbsp;
-      numberCheck += number;
-      booleanEven = !booleanEven;
-    }
-    if (numberCheck % 10 === 0) { return true; }
+  buttonValid() {
+    console.log('buttonValid');
+    this.parentEl.querySelectorAll('.card').forEach((element) =&gt; { element.classList.remove('blackout'); });
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (this.chekValid.check(this.parentEl.querySelector('.form-control').value) === true) {
+      this.paymentSystemCheck.check(this.parentEl.querySelector('.form-control').value);
+    } else { <span class="cstat-no" title="statement not covered" >alert('Некорректно введён номер карты'); </span>}
   }
 }
 &nbsp;</pre></td></tr></table></pre>
@@ -139,7 +133,7 @@ export default class CheckValid {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Sat Nov 06 2021 00:56:05 GMT+0400 (Персидский залив)
+                at Fri Nov 05 2021 01:43:00 GMT+0400 (Персидский залив)
             </div>
         </div>
         <script src="prettify.js"></script>

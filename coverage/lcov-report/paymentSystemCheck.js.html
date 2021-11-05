@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">57.14% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>12/21</span>
+                <span class='fraction'>26/26</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">48% </span>
+                <span class="strong">96% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>12/25</span>
+                <span class='fraction'>24/25</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">58.82% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>10/17</span>
+                <span class='fraction'>22/22</span>
             </div>
         
             
@@ -55,7 +55,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -84,57 +84,90 @@
 <a name='L25'></a><a href='#L25'>25</a>
 <a name='L26'></a><a href='#L26'>26</a>
 <a name='L27'></a><a href='#L27'>27</a>
-<a name='L28'></a><a href='#L28'>28</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">49x</span>
+<span class="cline-any cline-yes">49x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/* eslint-disable linebreak-style */
+/* eslint-disable no-plusplus */
 /* eslint-disable class-methods-use-this */
 export default class PaymentSystemCheck {
+  constructor(parentEl) {
+    this.parentEl = parentEl;
+    this.cards = parentEl.getElementsByTagName('span');
+    this.blackout = this.blackout.bind(this);
+  }
+&nbsp;
   check(value) {
+    console.log('paymentcheck');
     const number = parseInt(value.charAt(0), 10);
     const numberTwo = parseInt(value.charAt(1), 10);
-    const cards = document.querySelectorAll('.card');
-    function blackout(clas) {
-      cards.forEach((element) =&gt; { if (element.classList.contains(clas) === false) { element.classList.add('blackout'); } });
-    }
-    <span class="missing-if-branch" title="if path not taken" >I</span>if (number === 2) {
-<span class="cstat-no" title="statement not covered" >      blackout('mir');</span>
-    } else <span class="missing-if-branch" title="else path not taken" >E</span>if (number === 3) {
-      <span class="missing-if-branch" title="else path not taken" >E</span>if (numberTwo === 0 || <span class="branch-1 cbranch-no" title="branch not covered" >numberTwo === 6 </span>|| <span class="branch-2 cbranch-no" title="branch not covered" >numberTwo === 8)</span> {
-        blackout('diners_club');
-      } <span class="missing-if-branch" title="if path not taken" >I</span>if (numberTwo === 4 || numberTwo === 7) {
-<span class="cstat-no" title="statement not covered" >        blackout('amex');</span>
-      } <span class="missing-if-branch" title="if path not taken" >I</span>if (numberTwo === 1 || numberTwo === 5) {
-<span class="cstat-no" title="statement not covered" >        blackout('jcb');</span>
+    if (number === 2) {
+      this.blackout('mir');
+    } else if (number === 3) {
+      if (numberTwo === 0 || numberTwo === 6 || numberTwo === 8) {
+        this.blackout('diners_club');
+      } if (numberTwo === 4 || numberTwo === 7) {
+        this.blackout('amex');
+      } if (numberTwo === 1 || numberTwo === 5) {
+        this.blackout('jcb');
       }
-    } else <span class="cstat-no" title="statement not covered" >if (number === 4) { <span class="cstat-no" title="statement not covered" >blackout('visa'); </span>} else <span class="cstat-no" title="statement not covered" >if (number === 5) {</span></span>
-<span class="cstat-no" title="statement not covered" >      blackout('master');</span>
-    } else <span class="cstat-no" title="statement not covered" >if (number === 6) {</span>
-<span class="cstat-no" title="statement not covered" >      blackout('discover');</span>
+    } else if (number === 4) { this.blackout('visa'); } else if (number === 5) {
+      this.blackout('master');
+    } else <span class="missing-if-branch" title="else path not taken" >E</span>if (number === 6) {
+      this.blackout('discover');
+    }
+  }
+&nbsp;
+  blackout(clas) {
+    for (let i = 0; i &lt; this.cards.length; i++) {
+      const element = this.cards[i];
+      if (element.classList.contains(clas) === false) { element.classList.add('blackout'); }
     }
   }
 }
@@ -145,7 +178,7 @@ export default class PaymentSystemCheck {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Thu Nov 04 2021 01:45:16 GMT+0400 (Персидский залив)
+                at Sat Nov 06 2021 00:56:05 GMT+0400 (Персидский залив)
             </div>
         </div>
         <script src="prettify.js"></script>

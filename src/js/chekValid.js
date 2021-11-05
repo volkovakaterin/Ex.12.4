@@ -1,12 +1,12 @@
 /* eslint-disable linebreak-style */
 /* eslint-disable consistent-return */
 /* eslint-disable class-methods-use-this */
-/* eslint-disable no-param-reassign */
 /* eslint-disable no-plusplus */
 /* eslint-disable no-cond-assign */
-/* eslint-disable eqeqeq */
+
 export default class CheckValid {
   check(value) {
+    console.log('chaekValid');
     let numberCheck = 0;
     let booleanEven = false;
 
